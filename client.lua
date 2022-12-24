@@ -3,7 +3,7 @@ nv = false
 
 RegisterNetEvent('nd-nv:toggle')
 AddEventHandler('nd-nv:toggle', function()
-	local ChangeClothes = true -- true -> Показва маската на лицето ви | false -> Не показва маската на лицето ви
+	local ChangeClothes = true -- true -> Показва маската на лицето | false -> Не показва маската на лицето
 	local ped = GetPlayerPed(-1)
 		if nv == false then
 			nv = true
@@ -32,10 +32,10 @@ AddEventHandler('nd-nv:toggle', function()
 			Wait(1100)
 			SetNightvision(false)
 			nv = false
-				if ChangeClothes == true then
-				TaskPlayAnim(ped, "mp_masks@standard_car@ds@", "put_on_mask", 2.0, 2.0, 800, 51, 0, false, false, false)
-				SetPedComponentVariation(ped, 1, 0, 0, 0)  -- Без маска
-			end
+			if ChangeClothes == true then
+			        TaskPlayAnim(ped, "mp_masks@standard_car@ds@", "put_on_mask", 2.0, 2.0, 800, 51, 0, false, false, false)
+			        SetPedComponentVariation(ped, 1, 0, 0, 0)  -- Без маска
+	        end
         end
 end)
 
